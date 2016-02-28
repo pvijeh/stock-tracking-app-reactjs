@@ -8,8 +8,7 @@
  */
 
 import React, { Component } from 'react';
-// import DatePicker from 'react-datepicker';
-import DatePicker from '../react-datepicker';  
+import DatePicker from 'react-datepicker';
 import moment from 'moment'; 
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './AddItemModal.scss';
