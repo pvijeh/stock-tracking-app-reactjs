@@ -12,7 +12,16 @@
 
  "use strict";
 
-var faker = require('faker');
+import faker from 'faker';
+
+// round date to nearest day 
+const key = function(d) {
+  function two(n) {
+    return (n < 10 ? '0' : '') + n;
+  }
+
+  return two(d.getDate()) + '/' + two(d.getMonth() + 1) + '/' + d.getFullYear();
+};
 
 class FakeObjectDataListStore {
   constructor(/*number*/ size){
@@ -23,10 +32,10 @@ class FakeObjectDataListStore {
   createFakeRowObjectData(/*number*/ index) /*object*/ {
     return {
       id: index,
-      name: faker.name.firstName(),
+      name: faker.commerce.productName(),
       description: faker.company.catchPhrase(),
       price: Math.round(faker.random.number()*0.001),
-      date: faker.date.past(),
+      date: key(faker.date.past()),
       taxable: faker.random.boolean()
     };
   }

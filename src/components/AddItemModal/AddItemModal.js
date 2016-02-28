@@ -14,6 +14,15 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './AddItemModal.scss';
 import AppActions from '../../actions/appActions';
 
+// round date to nearest day 
+const key = function(d) {
+  function two(n) {
+    return (n < 10 ? '0' : '') + n;
+  }
+
+  return two(d.getDate()) + '/' + two(d.getMonth() + 1) + '/' + d.getFullYear();
+};
+
 const getInitialValues = function (){
     
     return {
@@ -77,7 +86,7 @@ class AddItemModal extends Component {
   } // close handleInputChange method 
 
   handleDateChange = event => {
-    let tempDate = (()=> {return this.state.newStockItem})(); 
+    let tempDate = this.state.newStockItem;  
     tempDate.date = event; 
 
     this.setState({
@@ -101,18 +110,24 @@ class AddItemModal extends Component {
         alert('Please select taxability');
     } else {
 
+        // convert date from moment to JS date object and round 
+        newItem.date = key(newItem.date.toDate());
+
         // send the form data to the store 
         AppActions.addNewStockItem(this.state.newStockItem);    
         
-     //   clear form data  to make way for additional item
+        //   clear form data  to make way for additional item
         this.setState({
             newStockItem: getInitialValues()
         })
-        
+
+        // alert message saying new stock item added 
+        alert(newItem.name+' added to stock tracking table'); 
     }
   }
 
   render() {
+
     let buttonActiveCSS = this.state.newStockItem.taxable; 
 
     return (
