@@ -1,0 +1,118 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.scss';
+
+.root {
+  height: 100vh;
+  width: 100%;
+  position:fixed; 
+  top:0;
+  left:0; 
+  background-color: rgba(0,0,0,.5);
+  z-index:10;
+}
+
+.modal{
+  min-height: 300px; 
+  background-color: white;
+  border: 1px solid #999; 
+  border-radius: 3px; 
+  position: relative; 
+  top: 50px; 
+  max-width: 600px; 
+  width: 90%; 
+  left: 50%; 
+  margin-left: -300px; 
+  padding: 30px; 
+
+  input {
+    width: 100%; 
+    margin: 5px 0; 
+    padding: 3px 10px;
+    border-radius: 3px; 
+    border: none;
+    font-size: 1.6rem; 
+    line-height: 2.4rem;
+    color: #555;
+    font-weight: 400; 
+    background-color: #d3d3d3;
+    box-shadow: none; 
+  }
+
+  label {
+    padding: 5px 0 0 0;
+    display: block; 
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+
+    span{
+      display: block; 
+    }
+
+  }
+
+  .selectButton{
+    display: inline-block;
+    width:  48%; 
+    margin: 5px 1%; 
+    padding: 3px 10px;
+    border-radius: 3px; 
+    border:none; 
+    position:relative; 
+  }
+
+  .selectButton_active{
+    background-color: orange;
+    color: white; 
+    
+    &:before{
+      content: '\2713';
+      position:absolute; 
+      right: 1rem;
+      top: 50%;
+      margin-top: -1rem; 
+      line-height: 2rem;
+      font-size: 2rem;
+      height: 2rem;
+      width: 2rem;  
+    }
+
+  }
+
+}
+
+.closeModal{
+  background-color: #d3d3d3;
+  position: absolute; 
+  top: -10px; 
+  right: -10px;
+  height: 30px;
+  width: 30px; 
+  border-radius: 50%; 
+  border: none;
+}
+
+.addNewStockItemButton{
+  padding: 5px 10px;
+  max-width: 250px; 
+  width: 90%;
+  display: block;
+  margin: 15px auto;
+  font-size: 1.8rem; 
+  line-height: 2.4rem; 
+  background-color: #444;
+  color: white; 
+  border:none; 
+  border-radius: 3px; 
+}
+
+
+

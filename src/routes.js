@@ -11,12 +11,11 @@ import React from 'react';
 import Router from 'react-routing/src/Router';
 import fetch from './core/fetch';
 import App from './components/App';
-import ContentPage from './components/ContentPage';
-import ContactPage from './components/ContactPage';
-import LoginPage from './components/LoginPage';
-import RegisterPage from './components/RegisterPage';
 import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
+import HomePage from './components/HomePage';
+import StockTable from './components/StockTable';
+import FakeObjectDataListStore from './components/fixed-data-table/examples/helpers/FakeObjectDataListStore'; 
 
 const router = new Router(on => {
   on('*', async (state, next) => {
@@ -24,17 +23,14 @@ const router = new Router(on => {
     return component && <App context={state.context}>{component}</App>;
   });
 
-  on('/contact', async () => <ContactPage />);
+  on('/', async (state) => {
+      const content = new FakeObjectDataListStore(20);
+      return content && <HomePage content={content} />;
+  });  
 
-  on('/login', async () => <LoginPage />);
+  on('/', async () => <HomePage />);
 
-  on('/register', async () => <RegisterPage />);
-
-  on('*', async (state) => {
-    const response = await fetch(`/api/content?path=${state.path}`);
-    const content = await response.json();
-    return response.ok && content && <ContentPage {...content} />;
-  });
+  // on('/', async () => <StockTable />);
 
   on('error', (state, error) => state.statusCode === 404 ?
     <App context={state.context} error={error}><NotFoundPage /></App> :

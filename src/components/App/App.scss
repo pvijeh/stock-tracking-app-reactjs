@@ -17,12 +17,16 @@
  * Base styles
  * ========================================================================== */
 
+*{
+box-sizing: border-box;
+}
+
 html {
   color: #222;
   font-weight: 100;
-  font-size: 1em; /* ~16px; */
   font-family: $font-family-base;
-  line-height: 1.375; /* ~22px */
+  font-size: 10px; 
+  line-height: 10px; 
 }
 
 /*

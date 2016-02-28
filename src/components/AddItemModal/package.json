@@ -1,0 +1,6 @@
+{
+  "name": "AddItemModal",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AddItemModal.js"
+}
