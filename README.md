@@ -11,7 +11,7 @@
 
 ### Objective:  
 
-> Build a simple single page application that can track store stock items for the following attributes: 
+> Build a simple single page application that can track store stock items for the following attributes:  
 > name  
 > description  
 > price  
