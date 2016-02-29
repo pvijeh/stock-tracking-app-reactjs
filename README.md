@@ -1,6 +1,6 @@
 # Basic Store Stock Item Tracking Application 
 
->This is a demo single page application.  This application is used by store owners to track their stock items. 
+>This is a demo single page application.  The purpose of this application is to allow store owners to track inventory items.  
 
 ## How to install and run: 
 
@@ -24,14 +24,15 @@
 
 #### Libraries and Frameworks Used: 
 
-> For this application I used the [React Isomorphic Starter Kit ](https://github.com/kriasoft/react-starter-kit)
-> the starter kit includes react.js, Babel, webpack, postcss and a well organized directory structure as well as isomorphic rendering 
+> For this application I used the [React Isomorphic Starter Kit ](https://github.com/kriasoft/react-starter-kit)  
+> the starter kit includes react.js, Babel, webpack, postcss  
+>and a well organized directory structure as well as isomorphic rendering  
 > In addition to the starter kit, I also used the following libraries:  
-> [faker](https://github.com/marak/Faker.js/) - used to generate fake data 
-> [Event Emitter 3](https://github.com/primus/eventemitter3) - used in conjunction with Flux
-> [Flux](https://github.com/facebook/flux),  used to communicate  between components and manage state 
-> [React Datepicker Component](https://www.npmjs.com/package/react-datepicker) - a data table component for react.js
-> [React Data Fixed Table](https://facebook.github.io/fixed-data-table/) -- a data table component for react.js
+> [faker](https://github.com/marak/Faker.js/) - used to generate fake data  
+> [Event Emitter 3](https://github.com/primus/eventemitter3) - used in conjunction with Flux  
+> [Flux](https://github.com/facebook/flux),  used to communicate  between components and manage state   
+> [React Datepicker Component](https://www.npmjs.com/package/react-datepicker) - a data table component for react.js  
+> [React Data Fixed Table](https://facebook.github.io/fixed-data-table/) -- a data table component for react.js  
 
 #### Scalability 
 
