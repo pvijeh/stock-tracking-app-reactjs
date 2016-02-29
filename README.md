@@ -41,6 +41,8 @@
 #### Maintainability 
 > Thanks to the React Isomorphic Starter Kit, the app has a organized and maintainable directory structure.   Components are organized into individual folders along side accompanying CSS   
 
+#### Potential Pain Points
+> This project leverages the  [React Isomorphic Starter Kit ](https://github.com/kriasoft/react-starter-kit).  There is no easy way to take advantage of continued development of the starter kit as it would require manually merging the projects, which can be time consuming and error prone.  Additionally,  this project introduces some unnecessary complexity (isomorphic rendering) and must be run on a server-- which introduce additional obstacles that would not be present if this were purely a client side app.  
 
 See [demo](http://demo.reactstarterkit.com) &nbsp;|&nbsp;
 [docs](https://github.com/kriasoft/react-starter-kit/tree/master/docs) &nbsp;|&nbsp;
