@@ -4,19 +4,19 @@
 
 ## How to install and run: 
 
-> git clone https://github.com/pvijeh/stock-tracking-app-reactjs
-> npm install 
-> npm run 
+> git clone https://github.com/pvijeh/stock-tracking-app-reactjs  
+> npm install   
+> npm run   
 
 
 ### Objective:  
 
 > Build a simple single page application that can track store stock items for the following attributes: 
-> name
-> description
-> price
-> available date
-> Taxability 
+> name  
+> description  
+> price  
+> available date  
+> Taxability   
 
 > Users should be able to view all existing stock items as well as add new stock items 
 
